@@ -58,7 +58,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 #### `GET` `/categories` 
 ###### Endpoint for get all available categories
 **-** **Response result** (example):
-```json
+```
 {
     "categories": {
         "1": "Science",
@@ -76,10 +76,10 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ------
 
 #### `GET` `/questions` 
-###### Endpoint for get all available questions with pagination (every 10 questions in one page)
+###### Endpoint for get all available questions with pagination (every 10 questions in one page) , and all categories , and total questions in the database
 **-** **Request arguments**: Accept only integer "Page Number"
 **-** **Response result** (example): `/questions?page=1`
-```json
+```
 {
     "categories": {
         "1": "Science",
@@ -106,8 +106,6 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
             "question": "Whose autobiography is entitled 'I Know Why the Caged Bird Sings'?"
         },
         ...
-        ...
-        ...
     ],
     "success": true,
     "total_questions": 31
@@ -120,7 +118,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ###### Endpoint for delete a question by id.
 **-** **Request arguments** : Accept only integer "Question ID"
 **-** **Response result** (example): `'/questions/1'`
-```json
+```
 {
     "deleted": "1",
     "success": true
@@ -134,7 +132,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 #### create a new question
 **-** **Request body**
-```json
+```
 {
     "question": "string", 
     "answer": "string", 
@@ -143,7 +141,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 }
 ```
 **-** **Response result** (example) :
-```json
+```
 {
     "created": Integer,
     "questions": [
@@ -155,8 +153,6 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
             "question": "String"
         },
         ...
-        ...
-        ...
     ],
     "success": true,
     "total_questions": Integer
@@ -165,14 +161,14 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
     
 #### search on questions
 **-** **Request body**
-```json
+```
 {
     "searchTerm": "String"
 }
 ```
 
 **-** **Response result** (example) :
-```json
+```
 {
     "current_category": null,
     "questions": [
@@ -183,8 +179,6 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
             "id": Integer,
             "question": "String"
         }
-        ...
-        ...
         ...
     ],
     "success": true,
@@ -198,7 +192,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ###### Endpoint to get questions based on category.
 **-** **Request arguments**: Accept only integer "Category ID"
 **-** **Response result** (example):  `'/categories/1/questions'`
-```json
+```
 {
     "current_category": Integer,
     "questions": [
@@ -209,8 +203,6 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
             "id": Integer,
             "question": "String"
         },
-        ...
-        ...
         ...
     ],
     "success": true,
@@ -226,7 +218,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 > **_NOTE:_**  You can get a one question NOT based on category, by put the **id** in **quiz_category** equal 0. 
 
 **-** **Request body** :
-```json
+```
  {
     "quiz_category": 
     {
@@ -238,7 +230,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ```
 
 **-** **Response result** (example) :
-```json
+```
 {
     "question": {
         "answer": "String",

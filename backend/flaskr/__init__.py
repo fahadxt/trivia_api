@@ -3,11 +3,10 @@ from flask import Flask, request, abort, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import random
-
 from models import setup_db, Question, Category
 
+#Pagination function
 QUESTIONS_PER_PAGE = 10
-
 def paginate(request, selection):
   page = request.args.get('page', 1, type=int)
   start =  (page - 1) * QUESTIONS_PER_PAGE
@@ -38,11 +37,6 @@ def create_app(test_config=None):
   def categories_index():
     categories = Category.query.order_by(Category.id).all()
     categories = {category.id: category.type for category in categories}
-
-    # example output 
-    # "categories": {
-    #     "1": "Science",
-    # }
 
     if len(categories) == 0:
       abort(404)

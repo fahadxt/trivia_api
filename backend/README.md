@@ -1,41 +1,4 @@
-<style>
-.delete{
-    padding:0.5em;
-    border: 2px solid #CF3030;
-    border-radius: 0.3em;
-    background-color: #FBEEEE;
-}
-.delete code{
-    color: #fff;
-    background-color: #CF3030;
-}
-
-.get{
-    padding:0.5em;
-    border: 2px solid #1391FF;
-    border-radius: 0.3em;
-    background-color: #ECF6FF;
-}
-.get code{
-    color: #fff;
-    background-color: #1391FF;
-}
-
-.post{
-    padding:0.5em;
-    border: 2px solid #009D77;
-    border-radius: 0.3em;
-    background-color: #EBF7F4;
-
-}
-.post code{
-    color: #fff;
-    background-color: #009D77;
-}
-</style>
-
-
-# Trivia API Backend ❤️ {.color-1}
+# Trivia API Backend ❤️ 
 
 ## Getting Started 
 
@@ -92,9 +55,9 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ### API ✨
 
-#### `GET` `/categories` {.get}
+#### `GET` `/categories` 
 ###### Endpoint for get all available categories
-:fa-caret-right: **Response result** (example):
+**-** **Response result** (example):
 ```json
 {
     "categories": {
@@ -112,10 +75,10 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ------
 
-#### `GET` `/questions` {.get}
+#### `GET` `/questions` 
 ###### Endpoint for get all available questions with pagination (every 10 questions in one page)
-:fa-caret-right: **Request arguments**: Accept only integer "Page Number"
-:fa-caret-right: **Response result** (example): `/questions?page=1`
+**-** **Request arguments**: Accept only integer "Page Number"
+**-** **Response result** (example): `/questions?page=1`
 ```json
 {
     "categories": {
@@ -153,10 +116,10 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ------
 
-#### `DELETE` `/questions/<question_id>` {.delete}
+#### `DELETE` `/questions/<question_id>` 
 ###### Endpoint for delete a question by id.
-:fa-caret-right: **Request arguments** : Accept only integer "Question ID"
-:fa-caret-right: **Response result** (example): `'/questions/1'`
+**-** **Request arguments** : Accept only integer "Question ID"
+**-** **Response result** (example): `'/questions/1'`
 ```json
 {
     "deleted": "1",
@@ -166,11 +129,11 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ------
 
-#### `POST` `/questions` {.post}
+#### `POST` `/questions` 
 ######  Endpoint for **`create a new question`** or **`search on questions`**
 
 #### create a new question
-:fa-caret-right: **Request body**
+**-** **Request body**
 ```json
 {
     "question": "string", 
@@ -179,7 +142,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
     "category": Integer
 }
 ```
-:fa-caret-right: **Response result** (example) :
+**-** **Response result** (example) :
 ```json
 {
     "created": Integer,
@@ -201,14 +164,14 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ```
     
 #### search on questions
-:fa-caret-right: **Request body**
+**-** **Request body**
 ```json
 {
     "searchTerm": "String"
 }
 ```
 
-:fa-caret-right: **Response result** (example) :
+**-** **Response result** (example) :
 ```json
 {
     "current_category": null,
@@ -231,10 +194,10 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ------
     
-#### `GET` `/categories/<category_id>/questions` {.get}
+#### `GET` `/categories/<category_id>/questions` 
 ###### Endpoint to get questions based on category.
-:fa-caret-right: **Request arguments**: Accept only integer "Category ID"
-:fa-caret-right: **Response result** (example):  `'/categories/1/questions'`
+**-** **Request arguments**: Accept only integer "Category ID"
+**-** **Response result** (example):  `'/categories/1/questions'`
 ```json
 {
     "current_category": Integer,
@@ -257,12 +220,12 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ------
     
-#### `POST` `/quizzes` {.post}
+#### `POST` `/quizzes` 
 ###### Endpoint to get only one random question based on category, and you need to push the previous questions with body into `previous_questions` array to avoid any questions in this array.
 
 > **_NOTE:_**  You can get a one question NOT based on category, by put the **id** in **quiz_category** equal 0. 
 
-**Request body** :
+**-** **Request body** :
 ```json
  {
     "quiz_category": 
@@ -274,7 +237,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 }
 ```
 
-:fa-caret-right: **Response result** (example) :
+**-** **Response result** (example) :
 ```json
 {
     "question": {

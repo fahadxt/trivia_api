@@ -133,7 +133,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ####  Endpoint for **`create a new question`** or **`search on questions`**
 
 
-#### create a new question
+**`create a new question`**
 **-** **Request body**
 ```
 {
@@ -162,7 +162,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 }
 ```
     
-#### search on questions
+ **`search on questions`**
 **-** **Request body**
 ```
 {

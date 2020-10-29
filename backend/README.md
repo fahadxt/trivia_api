@@ -56,7 +56,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ### API ✨
 
 #### `GET` `/categories` 
-###### Endpoint for get all available categories
+#### Endpoint for get all available categories
 **-** **Response result** (example):
 ```
 {
@@ -76,8 +76,9 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ------
 
 #### `GET` `/questions` 
-###### Endpoint for get all available questions with pagination (every 10 questions in one page) , and all categories , and total questions in the database
+#### Endpoint for get all available questions with pagination (every 10 questions in one page) , and all categories , and total questions in the database
 **-** **Request arguments**: Accept only integer "Page Number"
+
 **-** **Response result** (example): `/questions?page=1`
 ```
 {
@@ -115,8 +116,9 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ------
 
 #### `DELETE` `/questions/<question_id>` 
-###### Endpoint for delete a question by id.
+#### Endpoint for delete a question by id.
 **-** **Request arguments** : Accept only integer "Question ID"
+
 **-** **Response result** (example): `'/questions/1'`
 ```
 {
@@ -189,8 +191,9 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ------
     
 #### `GET` `/categories/<category_id>/questions` 
-###### Endpoint to get questions based on category.
+#### Endpoint to get questions based on category.
 **-** **Request arguments**: Accept only integer "Category ID"
+
 **-** **Response result** (example):  `'/categories/1/questions'`
 ```
 {
@@ -213,7 +216,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ------
     
 #### `POST` `/quizzes` 
-###### Endpoint to get only one random question based on category, and you need to push the previous questions with body into `previous_questions` array to avoid any questions in this array.
+#### Endpoint to get only one random question based on category, and you need to push the previous questions with body into `previous_questions` array to avoid any questions in this array.
 
 > **_NOTE:_**  You can get a one question NOT based on category, by put the **id** in **quiz_category** equal 0. 
 

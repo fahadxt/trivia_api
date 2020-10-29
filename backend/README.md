@@ -208,6 +208,36 @@ GET `/categories/<category_id>/questions`
 }
 ```
 
+POST `/quizzes`
+- Endpoint for play quizzes
+
+- Request body :
+```
+ {
+    "quiz_category": 
+    {
+        "id":1, 
+        "type":"string"
+    }, 
+    "previous_questions": []
+}
+```
+
+- Returns example :
+```
+{
+    "question": {
+        "answer": "String",
+        "category": Integer,
+        "difficulty": Integer,
+        "id": Integer,
+        "question": "String"
+    },
+    "success": true
+}
+```
+
+
 ## Testing
 To run the tests, run
 ```

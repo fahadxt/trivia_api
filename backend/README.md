@@ -130,7 +130,8 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 ------
 
 #### `POST` `/questions` 
-######  Endpoint for **`create a new question`** or **`search on questions`**
+####  Endpoint for **`create a new question`** or **`search on questions`**
+
 
 #### create a new question
 **-** **Request body**

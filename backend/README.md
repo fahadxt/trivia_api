@@ -228,8 +228,7 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
  {
     "quiz_category": 
     {
-        "id":1, 
-        "type":"string"
+        "id":1
     }, 
     "previous_questions": []
 }
